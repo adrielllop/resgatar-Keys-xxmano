@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XX Mano | Resgatar Key de 6 Horas</title>
+<style>
+:root{--bg:#050505;--panel:#0d0d0d;--orange:#ff7900;--orange2:#ffad00;--muted:#b7b7b7;--line:#4b2609}*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#512000 0,transparent 42%),linear-gradient(145deg,#080808,#030303 72%);color:#f7f7f7;font:15px/1.45 system-ui,-apple-system,Segoe UI,Arial,sans-serif;min-height:100vh;display:grid;place-items:center;padding:22px;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;pointer-events:none;width:240px;height:3px;background:linear-gradient(90deg,transparent,var(--orange),transparent);transform:rotate(-48deg);filter:drop-shadow(0 0 9px var(--orange));opacity:.65}body:before{top:70px;left:-85px}body:after{right:-90px;bottom:90px}
+main{position:relative;width:min(560px,100%);padding:clamp(20px,5vw,34px);background:linear-gradient(155deg,#111 0%,#080808 75%);border:1px solid #713600;border-radius:25px;box-shadow:0 0 0 1px #ff79001c,inset 0 0 35px #ff790008,0 25px 90px #000;overflow:hidden}
+main:before{content:"";position:absolute;inset:0 20% auto;height:2px;background:linear-gradient(90deg,transparent,var(--orange2),transparent);box-shadow:0 0 20px var(--orange)}
+.brand{display:flex;justify-content:center;align-items:center;gap:9px;color:#ff9a21;font-size:13px;font-weight:950;letter-spacing:3px;text-transform:uppercase}.brand-mark{display:grid;place-items:center;width:35px;height:35px;border:1px solid #914600;border-radius:10px;background:#1c1006;color:#ff9b19;font-size:19px;box-shadow:0 0 20px #ff79001c}
+.hero{text-align:center;margin:25px 0 20px}.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid #5d310e;background:#1a1008;border-radius:999px;padding:7px 13px;color:#ffb15c;font-size:11px;font-weight:850;letter-spacing:1.6px}.dot{width:7px;height:7px;border-radius:50%;background:#ff8b00;box-shadow:0 0 10px #ff8b00}
+h1{font-size:clamp(30px,7vw,43px);line-height:1.02;letter-spacing:-1.8px;margin:18px 0 11px;font-weight:1000;text-transform:uppercase}h1 span{display:block;color:var(--orange);text-shadow:0 0 24px #ff79002c}.subtitle{margin:0 auto;max-width:370px;color:#c7c7c7;font-size:14px}
+.count{display:flex;align-items:center;justify-content:center;gap:10px;margin:22px 0 16px;padding:11px;border:1px solid #332115;border-radius:12px;background:#0a0908;color:#b9b9b9;font-size:11px;letter-spacing:1.4px}.count strong{color:#ff941e;font-size:16px;letter-spacing:0}
+.buttons{display:grid;gap:10px;margin-top:20px}button{font:inherit;border:0;border-radius:12px;padding:15px 18px;font-weight:900;letter-spacing:.5px;cursor:pointer;transition:transform .16s,filter .16s}button:active{transform:scale(.985)}#yes,#copy{background:linear-gradient(100deg,#ffb000,#ff7900 55%,#ff9a00);color:#1b0b00;box-shadow:0 7px 24px #ff79002b,inset 0 1px #ffe1a0}#yes{min-height:54px}#no{background:#161616;color:#ddd;border:1px solid #373737}#copy{width:100%;display:flex;justify-content:center;align-items:center;gap:10px;min-height:55px;font-size:16px}
+.keybox{display:none;margin-top:23px;padding:clamp(15px,4vw,23px);background:linear-gradient(145deg,#15100b,#080808 70%);border:1px solid #b65a0a;border-radius:19px;box-shadow:inset 0 0 25px #ff79000a,0 0 24px #ff790018;animation:reveal .4s ease-out}.key-heading{display:flex;justify-content:center;align-items:center;gap:8px;color:#ff9b22;font-size:12px;font-weight:950;letter-spacing:1.5px;text-transform:uppercase}.keyvalue{font-size:clamp(18px,4.6vw,25px);letter-spacing:1px;overflow-wrap:anywhere;color:#fff;margin:17px 0;padding:18px 12px;text-align:center;font-weight:900;background:#050505;border:1px solid #ff7900;border-radius:12px;box-shadow:inset 0 0 20px #ff790010;user-select:all}.status{margin-top:13px;color:#ffb36d;text-align:center;font-size:13px;white-space:pre-wrap;line-height:1.5;overflow-wrap:anywhere}.details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:18px}.detail{border:1px solid #30251b;background:#0a0908;border-radius:13px;padding:14px 7px;text-align:center;min-width:0}.detail-icon{font-size:20px;color:#ff941e;margin-bottom:6px}.detail-label{font-size:10px;color:#aaa;letter-spacing:1px;text-transform:uppercase}.detail-value{font-size:12px;font-weight:850;color:#f2f2f2;margin-top:4px}.notice{display:flex;gap:12px;align-items:center;margin-top:15px;padding:14px;border:1px solid #4a2a12;border-radius:13px;background:linear-gradient(90deg,#1b1008,#0a0908)}.notice-icon{font-size:25px;color:#ff941e}.notice strong{display:block;color:#ff9b22;font-size:12px;letter-spacing:.8px}.notice span{display:block;color:#c6c6c6;font-size:12px;margin-top:3px}.footer{text-align:center;color:#777;font-size:10px;letter-spacing:2px;margin-top:22px}.footer b{color:#ff8a13}
+@keyframes reveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@media(max-width:390px){body{padding:10px}main{padding:18px 14px}.details{gap:6px}.detail{padding:12px 4px}.detail-value{font-size:11px}.keyvalue{letter-spacing:.2px}}
+
+/* Identidade XX MANO: preto e branco, baseada no logo enviado. */
+:root{--bg:#000;--panel:#090909;--orange:#f2f2f2;--orange2:#fff;--muted:#aaa;--line:#383838}
+body{background:#000;color:#f5f5f5}
+body:before,body:after{display:none}
+main{background:#080808;border:1px solid #393939;border-radius:8px;box-shadow:0 24px 70px #000;padding:clamp(20px,5vw,34px)}
+main:before{background:#fff;height:1px;box-shadow:none;opacity:.45}
+.brand{flex-direction:column;gap:7px;color:#bdbdbd;font-size:11px;letter-spacing:2.5px}
+.brand-logo{display:block;width:min(100%,340px);height:auto;object-fit:contain;background:#000}
+.hero .eyebrow{border:1px solid #454545;background:#121212;border-radius:4px;color:#e5e5e5;letter-spacing:1.5px}
+.dot{background:#fff;box-shadow:none}
+h1 span{color:#fff;text-shadow:none}
+.subtitle{color:#bcbcbc}
+.count{border-color:#383838;border-radius:5px;background:#101010;color:#bbb}
+.count strong{color:#fff}
+button{border-radius:5px}
+#yes,#copy{background:#f2f2f2;color:#050505;box-shadow:none}
+#yes:hover,#copy:hover{filter:brightness(.88)}
+#no{background:#111;color:#ddd;border:1px solid #454545}
+#no:hover{background:#202020}
+.keybox{background:#0a0a0a;border:1px solid #484848;border-radius:6px;box-shadow:none}
+.key-heading{color:#eee}
+.keyvalue{background:#030303;border:1px solid #555;border-radius:5px;box-shadow:none;color:#fff}
+.status{color:#eee}
+.detail{border-color:#353535;background:#101010;border-radius:5px}
+.detail-icon{color:#ddd}
+.detail-label{color:#999}
+.detail-value{color:#f2f2f2}
+.notice{border-color:#414141;border-radius:5px;background:#111}
+.notice-icon,.notice strong{color:#fff}
+.notice span{color:#bdbdbd}
+.footer{color:#888;letter-spacing:1.6px}
+.footer b{color:#fff}
+@media(max-width:390px){main{padding:18px 14px}.brand-logo{width:min(100%,300px)}}
+
+</style></head>
+<body><main>
+<div class="brand"><img class="brand-logo" src="./xxmano-logo.png" alt="XX Mano"><span>ACESSO · XX MANO</span></div>
+<section class="hero"><div class="eyebrow"><span class="dot"></span> TESTE GRÁTIS · 6 HORAS</div><h1>SUA KEY <span>ESTÁ PRONTA!</span></h1><p class="subtitle" id="intro">Desbloqueie seu acesso de teste. Confirme abaixo e continue pelo encurtador.</p></section>
+<div class="count"><span>KEYS DISPONÍVEIS</span><strong id="count">—</strong></div>
+<div class="buttons" id="choice"><button id="yes">SIM, QUERO MINHA KEY　➜</button><button id="no">NÃO, AGORA NÃO</button></div>
+<div class="keybox" id="keybox"><div class="key-heading"><span>✦</span> SUA KEY FOI LIBERADA <span>✦</span></div><div class="keyvalue" id="keyvalue"></div><button id="copy"><span aria-hidden="true">▢</span> COPIAR KEY</button></div>
+<div class="details"><div class="detail"><div class="detail-icon">◷</div><div class="detail-label">Duração</div><div class="detail-value">6 HORAS</div></div><div class="detail"><div class="detail-icon">◇</div><div class="detail-label">Uso correto</div><div class="detail-value">EVITE EXCESSOS</div></div><div class="detail"><div class="detail-icon">⚠</div><div class="detail-label">Atenção</div><div class="detail-value">USE MODERADO</div></div></div>
+<div class="notice"><div class="notice-icon">✦</div><div><strong>APROVEITE SEU TESTE!</strong><span>Key grátis para teste. Use com responsabilidade e moderação.</span></div></div>
+<div class="status" id="status" role="status" aria-live="polite"></div><div class="footer">POWERED BY <b>XX MANO</b> · USE COM RESPONSABILIDADE</div>
+</main>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getDatabase,ref,onValue,get,runTransaction} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import {firebaseConfig} from "./firebase-config.js";
+const app=initializeApp(firebaseConfig),db=getDatabase(app);
+const $=s=>document.querySelector(s);let currentKey='';
+const SAVED_KEY='mx_delivered_key_v1';
+let claimInProgress=false;
+function showDeliveredKey(key){
+ currentKey=String(key||'');
+ if(!currentKey)return false;
+ $('#keyvalue').textContent=currentKey;
+ $('#keybox').style.display='block';
+ $('#choice').style.display='none';
+ $('#intro').textContent='Sua Key de teste foi liberada. Copie o código abaixo para continuar.';
+ return true;
+}
+function restoreDeliveredKey(){
+ const saved=sessionStorage.getItem(SAVED_KEY);
+ if(saved){showDeliveredKey(saved);return true;}
+ return false;
+}
+const isAvailable=v=>v && v.status!=='redeemed' && v.redeemed!==true;
+function updateCount(data){const vals=Object.values(data||{});$('#count').textContent=vals.filter(isAvailable).length.toLocaleString('pt-BR');}
+onValue(ref(db,'keys'),snap=>updateCount(snap.val()),err=>{$('#count').textContent='—';$('#status').textContent='Não foi possível consultar as Keys. Verifique a conexão e as regras do Firebase.';});
+async function waitForConnection(timeoutMs=10000){
+ const connectedRef=ref(db,'.info/connected');
+ return await new Promise((resolve,reject)=>{
+  let done=false;
+  const unsub=onValue(connectedRef,snap=>{
+   if(snap.val()===true&&!done){done=true;unsub();resolve(true);}
+  },err=>{if(!done){done=true;unsub();reject(err);}});
+  setTimeout(()=>{if(!done){done=true;unsub();reject(new Error('O Firebase não conectou. Confira internet e URL do banco.'));}},timeoutMs);
+ });
+}
+async function claimKey(){
+ // Só resgata após o retorno do encurtador; evita duas reservas simultâneas.
+ if(restoreDeliveredKey() || claimInProgress)return;
+ claimInProgress=true;
+ if(sessionStorage.getItem('key_claimed_this_session')==='1'){
+  // Compatibilidade com versões anteriores que salvavam apenas a flag, sem salvar a Key.
+  sessionStorage.removeItem('key_claimed_this_session');
+ }
+
+ try{
+  let lastError=null;
+  for(let attempt=1;attempt<=3;attempt++){
+   try{
+    await waitForConnection();
+    const snap=await get(ref(db,'keys'));
+    const data=snap.val()||{};
+    const entries=Object.entries(data).filter(([,v])=>isAvailable(v));
+    if(!entries.length){$('#status').textContent='No momento não há Keys disponíveis. Tente novamente mais tarde.';return;}
+    for(const [id,record] of entries){
+     try{
+      // A transação remove o registro de forma atômica: apenas um visitante
+      // consegue resgatar cada Key, e o painel ADM recebe a exclusão em tempo real.
+      let claimedRecord=null;
+      const result=await runTransaction(ref(db,'keys/'+id),current=>{
+       if(!isAvailable(current))return;
+       claimedRecord=current;
+       return null; // null no Realtime Database significa excluir este registro.
+      },{applyLocally:false});
+      if(result.committed){
+       currentKey=String(claimedRecord?.key||record.key||id);
+       // A exclusão já foi confirmada; falha de sessionStorage não deve bloquear a entrega.
+       try{sessionStorage.setItem(SAVED_KEY,currentKey);sessionStorage.setItem('key_claimed_this_session','1');}catch(storageError){}
+       showDeliveredKey(currentKey);
+       $('#status').textContent='';return;
+      }
+     }catch(e){lastError=e;break;}
+    }
+    if(lastError)throw lastError;
+    $('#status').textContent='As Keys disponíveis foram alteradas enquanto você tentava resgatar. Tentando novamente...';
+   }catch(e){lastError=e;if(attempt<3){$('#status').textContent=`Conexão interrompida (tentativa ${attempt}/3). Tentando novamente...`;await new Promise(r=>setTimeout(r,800*attempt));}}
+  }
+  $('#status').textContent='Não foi possível reservar a Key após 3 tentativas. Verifique se o site e o Painel ADM usam o mesmo Firebase, se as regras foram publicadas e se a conexão está estável.'+(lastError?' Detalhe: '+lastError.message:'');
+ }catch(e){$('#status').textContent='Erro ao conectar ao Firebase: '+e.message;}
+ finally{claimInProgress=false;}
+}
+function returnedFromShortener(){return sessionStorage.getItem('waiting_for_shortener')==='1'}
+function startReturnFlow(){
+ if(restoreDeliveredKey())return;
+ if(returnedFromShortener()){sessionStorage.removeItem('waiting_for_shortener');claimKey();}
+}
+$('#yes').onclick=async()=>{
+ try{const snap=await get(ref(db,'settings/shortenerUrl'));const url=String(snap.val()||'').trim();
+  if(!/^https?:\/\//i.test(url)){$('#status').textContent='O administrador ainda não configurou um link válido do Alpha Rede.';return}
+  sessionStorage.setItem('waiting_for_shortener','1');
+  // Pass return URL as a query parameter when the shortener accepts it.
+  const returnUrl=new URL(location.href.split('#')[0]);returnUrl.searchParams.set('mx_return','1');
+  const target=new URL(url);target.searchParams.set('return_url',returnUrl.toString());
+  location.href=target.toString();
+ }catch(e){$('#status').textContent='Não foi possível abrir o encurtador: '+e.message}
+};
+$('#no').onclick=()=>{$('#choice').style.display='none';$('#status').textContent='Tudo bem! Você pode voltar quando quiser.'};
+$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(currentKey);$('#status').textContent='Key copiada!'}catch(e){const r=document.createRange();r.selectNodeContents($('#keyvalue'));const s=getSelection();s.removeAllRanges();s.addRange(r);$('#status').textContent='Selecione a Key e copie manualmente.'}};
+window.addEventListener('pageshow',startReturnFlow);
+if(!restoreDeliveredKey() && returnedFromShortener())startReturnFlow();
+</script></body></html>
