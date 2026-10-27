@@ -1,0 +1,21 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "settings": {
+      "shortenerUrl": {
+        ".read": true,
+        ".write": true
+      },
+      "availableCount": {
+        ".read": true,
+        ".write": true,
+        ".validate": "newData.isNumber() && newData.val() >= 0"
+      }
+    },
+    "keys": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}

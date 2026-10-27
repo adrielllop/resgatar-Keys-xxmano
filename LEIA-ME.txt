@@ -1,0 +1,20 @@
+SISTEMA DE RESGATE DE KEYS — XX MANO
+
+COMPORTAMENTO DO RESGATE
+- O site consulta as Keys disponíveis no Firebase Realtime Database.
+- No resgate bem-sucedido, uma transação atômica exclui a Key do nó /keys. Isso impede que dois visitantes resgatem a mesma Key ao mesmo tempo.
+- Como o Painel ADM escuta o nó /keys em tempo real, a Key removida desaparece da lista e os contadores são atualizados sem precisar atualizar a página manualmente.
+- A Key entregue fica guardada na sessão atual do navegador para que uma atualização da página não consuma outra Key.
+
+CONFIGURAÇÃO
+- Confira se firebase-config.js aponta para o mesmo projeto nas duas pastas.
+- Publique as regras do Firebase compatíveis com a operação de leitura e remoção.
+- O retorno após o encurtador depende do suporte do Alpha Rede ao parâmetro return_url.
+
+SEGURANÇA
+As regras incluídas permitem escrita pública e o painel não tem autenticação. Isso não é seguro para um sistema em produção: proteja o painel e o banco com Firebase Authentication e regras específicas, ou mova as operações privilegiadas para um backend confiável. Não publique com dados sensíveis sem implementar essa proteção.
+
+
+FIREBASE CONFIGURADO
+Realtime Database: https://keys-sistema-xxmano-default-rtdb.firebaseio.com
+Observação: a URL do banco foi atualizada. Os demais campos de firebase-config.js foram mantidos porque somente a URL do Realtime Database foi fornecida. Se este for um projeto Firebase novo, confira apiKey, authDomain, projectId e appId no Console do Firebase.
